@@ -50,6 +50,7 @@ module ActiveAdmin
     def has_many(association, options = {}, &block)
       options = { :for => association }.merge(options)
       options[:class] ||= ""
+      options[:wrapper_html_class] ||= ""
       options[:class] << "inputs has_many_fields"
 
       # Add Delete Links
